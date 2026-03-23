@@ -13,18 +13,11 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            // Уникальный логин пользователя (латиница и цифры)
-            $table->string('login')->unique();
-            // Пароль (для демо-экзамена можно хранить в открытом виде, без хеширования)
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            // ФИО (кириллица и пробелы — контролируется на уровне формы, без серверной валидации)
-            $table->string('full_name');
-            // Телефон в формате 8(XXX)XXX-XX-XX
-            $table->string('phone');
-            // Электронная почта
-            $table->string('email');
-            // Флаг администратора (доступ к панели администратора)
-            $table->boolean('is_admin')->default(false);
+            $table->rememberToken();
             $table->timestamps();
         });
 

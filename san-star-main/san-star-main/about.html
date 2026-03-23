@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании - SanStar</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Хедер такой же, как на главной странице -->
+    <header class="header">
+        <!-- ... existing code ... -->
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="about-page">
+                <h1 class="about-page__title">Мебельная фабрика SanStar - официальный сайт производителя</h1>
+                
+                <div class="about-page__content">
+                    <div class="about-page__text">
+                        <p>Фабрика SanStar успешно специализируется на производстве мебели для ванной комнаты. Выпускаемая продукция торговой марки SanStar известна потребителям от Калининграда до Дальнего Востока.</p>
+                        
+                        <p>Фабрика SanStar — это современное, высокотехнологичное производство с общей площадью 12 000 м² и 20 000 изделий в месяц.</p>
+                        
+                        <p>Компания осуществляет свою деятельность с 2015 года и является результатом сотрудничества производителей и молодых дизайнеров. Наша основная задача — производство и поставка на рынок функциональной, надежной и доступной по цене мебели.</p>
+                    </div>
+                    
+                    <div class="about-page__image">
+                        <img src="images/factory.jpg" alt="Производство SanStar">
+                    </div>
+                </div>
+
+                <div class="about-page__info">
+                    <h2 class="about-page__subtitle">Реквизиты компании</h2>
+                    <div class="company-info">
+                        <div class="company-info__item">
+                            <span class="company-info__label">ООО "Сантехсистем"</span>
+                            <span class="company-info__value">Полное Наименование: Общество с ограниченной ответственностью "Сантехсистем"</span>
+                        </div>
+                        <div class="company-info__item">
+                            <span class="company-info__label">Сокращенное наименование:</span>
+                            <span class="company-info__value">ООО "СТС"</span>
+                        </div>
+                        <div class="company-info__item">
+                            <span class="company-info__label">Юридический адрес:</span>
+                            <span class="company-info__value">105122, г.Москва, Щёлковское шоссе, д. 5 стр. 1, офис 705</span>
+                        </div>
+                        <div class="company-info__item">
+                            <span class="company-info__label">ИНН/КПП:</span>
+                            <span class="company-info__value">9718089339/771801001</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-page__certificates">
+                    <h2 class="about-page__subtitle">Сертификаты</h2>
+                    <div class="certificates-grid">
+                        <!-- Сетка с сертификатами -->
+                        <div class="certificate-card">
+                            <img src="images/certificates/cert1.jpg" alt="Сертификат 1" class="certificate-card__image">
+                            <button class="certificate-card__zoom">Увеличить</button>
+                        </div>
+                        <!-- Добавьте больше сертификатов -->
+                    </div>
+                </div>
+
+                <div class="about-page__contacts">
+                    <h2 class="about-page__subtitle">Контакты</h2>
+                    <div class="contacts-grid">
+                        <div class="contact-info">
+                            <h3 class="contact-info__title">Время работы</h3>
+                            <p class="contact-info__text">с 9.00 до 18.00 Пн-Пт</p>
+                            
+                            <h3 class="contact-info__title">Телефон</h3>
+                            <a href="tel:+74951086891" class="contact-info__link">+7 (495) 108-68-91</a>
+                            
+                            <h3 class="contact-info__title">Отдел рекламаций</h3>
+                            <a href="mailto:support@san-star.ru" class="contact-info__link">support@san-star.ru</a>
+                            
+                            <h3 class="contact-info__title">Наш адрес</h3>
+                            <p class="contact-info__text">
+                                Фабрика: Россия, Московская область, Орехово-Зуевский район, Кабаново 144<br>
+                                Офис: Россия, г. Москва, Щёлковское шоссе, 5с1, офис 512
+                            </p>
+                        </div>
+                        <div class="contact-map">
+                            <!-- Здесь будет карта -->
+                            <div id="map" class="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <!-- Футер такой же, как на главной странице -->
+    </footer>
+
+    <script src="src/js/main.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш-ключ&lang=ru_RU"></script>
+    <script>
+        // Инициализация карты
+        ymaps.ready(function () {
+            var myMap = new ymaps.Map('map', {
+                center: [55.821559, 38.964848],
+                zoom: 15
+            });
+
+            var myPlacemark = new ymaps.Placemark([55.821559, 38.964848], {
+                balloonContent: 'Фабрика SanStar'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        });
+    </script>
+</body>
+</html> 

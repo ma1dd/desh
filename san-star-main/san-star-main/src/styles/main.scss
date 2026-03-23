@@ -1,0 +1,17 @@
+// Utils
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/normalize';
+
+// Layout
+@import 'layout/grid';
+@import 'layout/typography';
+
+// Blocks
+@import 'blocks/header/header';
+@import 'blocks/footer/footer';
+@import 'blocks/catalog/catalog';
+@import 'blocks/about/about';
+@import 'blocks/news/news';
+@import 'blocks/form/form';
+@import 'blocks/stores/stores'; 

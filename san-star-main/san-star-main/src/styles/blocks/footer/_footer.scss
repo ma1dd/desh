@@ -1,0 +1,51 @@
+.footer {
+  background-color: $light-gray;
+  padding: 40px 0;
+  margin-top: 60px;
+  
+  &__container {
+    @include container;
+  }
+  
+  &__grid {
+    @include flex(space-between, flex-start);
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  &__column {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  &__title {
+    @include heading(1.25rem);
+    margin-bottom: 20px;
+  }
+  
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  &__link {
+    color: $text-color;
+    
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  
+  &__bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  &__copyright {
+    color: rgba($text-color, 0.7);
+    font-size: 0.875rem;
+  }
+} 

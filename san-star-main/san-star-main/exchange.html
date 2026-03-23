@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обмен и возврат - SanStar</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Хедер такой же, как на главной странице -->
+    <header class="header">
+        <!-- ... existing code ... -->
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="exchange-page">
+                <h1 class="exchange-page__title">Обмен и возврат</h1>
+
+                <div class="faq">
+                    <div class="faq__item">
+                        <h3 class="faq__question">Куда обращаться для предъявления рекламации?</h3>
+                        <div class="faq__answer">
+                            <p>Предъявить претензию можно заполнив форму обратной связи (обратной связи к«мобильные ссылки»)</p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <h3 class="faq__question">Какие документы необходимы для предъявления рекламации?</h3>
+                        <div class="faq__answer">
+                            <p>Письменная претензия, чек или гарантийный талон.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq__item">
+                        <h3 class="faq__question">Какие фото необходимо приложить к претензии при обращении?</h3>
+                        <div class="faq__answer">
+                            <p>Все претензии в отношении недостатков изделий должны сопровождаться при подаче прилагаемых к претензии документов:</p>
+                            <ul>
+                                <li>подтверждающих покупку изделия (товарный, кассовый чек или заполненный гарантийный талон);</li>
+                                <li>фото/видео материала, четко отражающий заявленный дефект, а также общий вид изделия.</li>
+                            </ul>
+                            <p>В некоторых случаях могут быть запрошены дополнительные материалы.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="warranty-info">
+                    <h2 class="warranty-info__title">Гарантия и обмен</h2>
+                    <div class="warranty-info__content">
+                        <p>Гарантийным случаем считается нарушения функциональности изделия, связанные с дефектами материала или изготовления.</p>
+                        <p>Гарантия не распространяется на неисправности, вызванные действиями третьих лиц, внешними воздействиями, неправильным использованием, естественным износом и т.д.</p>
+                    </div>
+                </div>
+
+                <div class="exchange-form">
+                    <h2 class="exchange-form__title">Претензия по браку, обмену, возврату</h2>
+                    <form class="form" id="exchangeForm">
+                        <div class="form__group">
+                            <label class="form__label">ФИО</label>
+                            <div class="form__row">
+                                <input type="text" class="form__input" placeholder="Фамилия" required>
+                                <input type="text" class="form__input" placeholder="Имя" required>
+                                <input type="text" class="form__input" placeholder="Отчество">
+                            </div>
+                        </div>
+
+                        <div class="form__group">
+                            <label class="form__label">Адрес</label>
+                            <input type="text" class="form__input" required>
+                        </div>
+
+                        <div class="form__group">
+                            <label class="form__label">Контактные данные</label>
+                            <div class="form__row">
+                                <input type="tel" class="form__input" placeholder="Телефон" required>
+                                <input type="email" class="form__input" placeholder="E-mail" required>
+                            </div>
+                        </div>
+
+                        <div class="form__group">
+                            <label class="form__label">Информация о товаре</label>
+                            <div class="form__row">
+                                <input type="text" class="form__input" placeholder="Где приобретен товар" required>
+                                <input type="text" class="form__input" placeholder="№ заказа" required>
+                            </div>
+                        </div>
+
+                        <div class="form__group">
+                            <label class="form__label">Наименование товара</label>
+                            <input type="text" class="form__input" required>
+                        </div>
+
+                        <div class="form__group">
+                            <label class="form__label">Описание проблемы</label>
+                            <textarea class="form__textarea" required></textarea>
+                        </div>
+
+                        <div class="form__group">
+                            <label class="form__label">Прикрепить файлы</label>
+                            <div class="form__file-inputs">
+                                <div class="form__file-group">
+                                    <label class="form__file-label">
+                                        Фото товара
+                                        <input type="file" class="form__file" accept="image/*" required>
+                                    </label>
+                                </div>
+                                <div class="form__file-group">
+                                    <label class="form__file-label">
+                                        Чек или гарантийный талон
+                                        <input type="file" class="form__file" accept="image/*,application/pdf" required>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="form__submit button button--primary">Отправить</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <!-- Футер такой же, как на главной странице -->
+    </footer>
+
+    <script src="src/js/main.js"></script>
+    <script src="src/js/exchange.js"></script>
+</body>
+</html> 

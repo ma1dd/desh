@@ -1,0 +1,28 @@
+// Colors
+$primary-color: #44637B;
+$secondary-color: #2B5073;
+$text-color: #333333;
+$light-gray: #F8F9FA;
+$white: #FFFFFF;
+
+// Typography
+$font-primary: 'Arial', sans-serif;
+$font-size-base: 16px;
+$line-height-base: 1.5;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Container
+$container-max-width: 1200px;
+$container-padding: 15px;
+
+// Transitions
+$transition-base: all 0.3s ease;
+
+// Z-indexes
+$z-index-header: 1000;
+$z-index-modal: 2000; 

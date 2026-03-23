@@ -1,0 +1,48 @@
+// Media queries
+@mixin media-up($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin media-down($breakpoint) {
+  @media (max-width: $breakpoint - 1) {
+    @content;
+  }
+}
+
+// Flexbox
+@mixin flex($justify: flex-start, $align: stretch, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+// Container
+@mixin container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+  width: 100%;
+}
+
+// Typography
+@mixin heading($size, $weight: bold) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: 1.2;
+  margin: 0;
+}
+
+// Buttons
+@mixin button-base {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: $transition-base;
+  text-decoration: none;
+  text-align: center;
+} 

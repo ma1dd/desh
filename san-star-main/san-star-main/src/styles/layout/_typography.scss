@@ -1,0 +1,55 @@
+h1, .h1 {
+  @include heading(2.5rem);
+}
+
+h2, .h2 {
+  @include heading(2rem);
+}
+
+h3, .h3 {
+  @include heading(1.75rem);
+}
+
+h4, .h4 {
+  @include heading(1.5rem);
+}
+
+h5, .h5 {
+  @include heading(1.25rem);
+}
+
+h6, .h6 {
+  @include heading(1rem);
+}
+
+p {
+  margin-bottom: 1rem;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: $transition-base;
+  
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+.text {
+  &-center {
+    text-align: center;
+  }
+  
+  &-right {
+    text-align: right;
+  }
+  
+  &-left {
+    text-align: left;
+  }
+} 
